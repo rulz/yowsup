@@ -1,3 +1,5 @@
+import os
+
 class YowConstants:
     DOMAIN       = "s.whatsapp.net"
     ENDPOINTS     = (
@@ -22,7 +24,7 @@ class YowConstants:
     WHATSAPP_SERVER = "s.whatsapp.net"
     WHATSAPP_GROUP_SERVER = "g.us"
 
-    PATH_STORAGE = "~/.yowsup"
+    PATH_STORAGE = os.getenv("YOWSUP_PATH_STORAGE", "~/.yowsup")
 
     PREVIEW_WIDTH = 64
     PREVIEW_HEIGHT = 64
